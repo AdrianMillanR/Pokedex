@@ -1,5 +1,6 @@
 package com.adrian.pokedex
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,8 +9,25 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.lang.ClassCastException
 
 class ListFragment : Fragment() {
+
+    interface PokemonSelectListener{
+        fun onPokemonSelected(pokemon: Pokemon)
+    }
+    private  lateinit var pokemonSelectListener: PokemonSelectListener
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        pokemonSelectListener= try {
+            context as PokemonSelectListener
+        }catch (e: ClassCastException) {
+            throw ClassCastException("$context must implement PokemonSelectListener")
+        }
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,7 +41,7 @@ class ListFragment : Fragment() {
         recycler.adapter=adapter
 
         adapter.onItemClickLitener={
-            Toast.makeText(requireActivity(), it.name, Toast.LENGTH_SHORT).show()
+            pokemonSelectListener.onPokemonSelected(it)
         }
 
         val pokemonList= mutableListOf(
