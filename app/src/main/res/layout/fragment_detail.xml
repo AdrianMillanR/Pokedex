@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailFragment"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/fragment_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bulbasaur"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fragment_detail_hp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@color/hp_background"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Hp 45"/>
+
+        <TextView
+            android:id="@+id/fragment_detail_atack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@color/attack_background"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Attack 40"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fragment_detail_defense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@color/defense_background"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Defense 22"/>
+
+        <TextView
+            android:id="@+id/fragment_detail_speed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@color/speed_background"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Speed 10"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
