@@ -30,10 +30,10 @@
             android:textColor="@color/text_black"
             android:textSize="18sp"
             android:fontFamily="sans-serif-medium"
-            android:text="Hp 45"/>
+            tools:text="Hp 45"/>
 
         <TextView
-            android:id="@+id/fragment_detail_atack"
+            android:id="@+id/fragment_detail_attack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -43,7 +43,7 @@
             android:textColor="@color/text_black"
             android:textSize="18sp"
             android:fontFamily="sans-serif-medium"
-            android:text="Attack 40"/>
+            tools:text="Attack 40"/>
     </LinearLayout>
 
     <LinearLayout
@@ -62,7 +62,7 @@
             android:textColor="@color/text_black"
             android:textSize="18sp"
             android:fontFamily="sans-serif-medium"
-            android:text="Defense 22"/>
+            tools:text="Defense 22"/>
 
         <TextView
             android:id="@+id/fragment_detail_speed"
@@ -75,7 +75,7 @@
             android:textColor="@color/text_black"
             android:textSize="18sp"
             android:fontFamily="sans-serif-medium"
-            android:text="Speed 10"/>
+            tools:text="Speed 10"/>
     </LinearLayout>
 
 
