@@ -35,10 +35,10 @@ class DetailFragment : Fragment() {
     }
 
     fun setPokemonData(pokemon:Pokemon){
-        hpText.text=pokemon.hp.toString()
-        attackText.text=pokemon.attack.toString()
-        defenseText.text=pokemon.defense.toString()
-        speedText.text=pokemon.speed.toString()
+        hpText.text=getString(R.string.hp_format,pokemon.hp)
+        attackText.text=getString(R.string.attack_format,pokemon.attack)
+        defenseText.text=getString(R.string.defense_format,pokemon.defense)
+        speedText.text=getString(R.string.speed_format,pokemon.speed)
     }
 
 
