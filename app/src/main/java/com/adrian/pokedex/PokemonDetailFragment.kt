@@ -79,6 +79,10 @@ class PokemonDetailFragment : Fragment() {
         defenseText.text=getString(R.string.defense_format,pokemon.defense)
         speedText.text=getString(R.string.speed_format,pokemon.speed)
         toolBar.title=pokemon.name
+        toolBar.setNavigationIcon(R.drawable.ic_arrow_back)
+        toolBar.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
+        }
 
         val mediaPlayer= MediaPlayer.create(requireActivity(), pokemon.soundId)
         mediaPlayer.start()
