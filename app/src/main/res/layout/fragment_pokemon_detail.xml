@@ -88,6 +88,15 @@
             tools:text="Speed 10"/>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/fragment_detail_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        tools:text="Bulbaaur"/>
+
 
 
 </LinearLayout>

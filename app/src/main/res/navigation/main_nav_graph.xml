@@ -18,5 +18,9 @@
         android:id="@+id/pokemonDetailFragment"
         android:name="com.adrian.pokedex.PokemonDetailFragment"
         android:label="fragment_pokemon_detail"
-        tools:layout="@layout/fragment_pokemon_detail" />
+        tools:layout="@layout/fragment_pokemon_detail" >
+        <argument
+            android:name="pokemon"
+            app:argType="com.adrian.pokedex.Pokemon"/>
+    </fragment>
 </navigation>
