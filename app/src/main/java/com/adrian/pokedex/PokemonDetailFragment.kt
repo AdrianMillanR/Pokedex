@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toolbar
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -25,6 +26,7 @@ class PokemonDetailFragment : Fragment() {
     private lateinit var defenseText:TextView
     private lateinit var speedText:TextView
     private lateinit var loaginWheel: ProgressBar
+    private lateinit var toolBar:androidx.appcompat.widget.Toolbar
     private val args: PokemonDetailFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -32,6 +34,7 @@ class PokemonDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        val pokemon=args.pokemon
         val rootView= inflater.inflate(R.layout.fragment_pokemon_detail, container, false)
         imageView=rootView.findViewById(R.id.fragment_detail_image)
         hpText=rootView.findViewById(R.id.fragment_detail_hp)
@@ -39,9 +42,8 @@ class PokemonDetailFragment : Fragment() {
         defenseText=rootView.findViewById(R.id.fragment_detail_defense)
         speedText=rootView.findViewById(R.id.fragment_detail_speed)
         loaginWheel=rootView.findViewById(R.id.loading_wheel)
-        val pokemon=args.pokemon
-        val nameText= rootView.findViewById<TextView>(R.id.fragment_detail_name)
-        nameText.text=pokemon.name
+        toolBar=rootView.findViewById(R.id.detail_toolbar)
+
         setPokemonData(pokemon)
         return rootView
     }
@@ -76,6 +78,7 @@ class PokemonDetailFragment : Fragment() {
         attackText.text=getString(R.string.attack_format,pokemon.attack)
         defenseText.text=getString(R.string.defense_format,pokemon.defense)
         speedText.text=getString(R.string.speed_format,pokemon.speed)
+        toolBar.title=pokemon.name
 
         val mediaPlayer= MediaPlayer.create(requireActivity(), pokemon.soundId)
         mediaPlayer.start()
