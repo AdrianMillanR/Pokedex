@@ -34,12 +34,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:padding="16dp"
             android:background="@color/hp_background"
             android:textColor="@color/text_black"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-medium"
+            style="@style/StatText"
             tools:text="Hp 45"/>
 
         <TextView
@@ -47,12 +44,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:padding="16dp"
             android:background="@color/attack_background"
             android:textColor="@color/text_black"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-medium"
+            style="@style/StatText"
             tools:text="Attack 40"/>
     </LinearLayout>
 
@@ -66,12 +60,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:padding="16dp"
             android:background="@color/defense_background"
             android:textColor="@color/text_black"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-medium"
+            style="@style/StatText"
             tools:text="Defense 22"/>
 
         <TextView
@@ -79,12 +70,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:padding="16dp"
             android:background="@color/speed_background"
             android:textColor="@color/text_black"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-medium"
+            style="@style/StatText"
             tools:text="Speed 10"/>
     </LinearLayout>
 
